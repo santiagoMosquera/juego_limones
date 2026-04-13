@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
   <title>Caza Limones</title>
   <link rel="stylesheet" href="limones.css">
   <script src="utils.js"></script>
 </head>
+
 <body onload="iniciar()">
   <div class="contenedor">
-    <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones ... </p>
-    <h2> Autor: Santiago Mosquera</h2>
-    <canvas id="areajuego" width="600" height="400"></canvas>
+
+    <header class="header">
+      <h1>🍋 Atrapar Limones</h1>
+      <p class="subtitulo">Si del cielo te caen limones...</p>
+      <p class="autor">Autor: Santiago Mosquera</p>
+    </header>
+
+    <div class="game-wrapper">
+      <canvas id="areajuego" width="600" height="400"></canvas>
+    </div>
+
     <div class="panel">
-      <p>Puntaje: <span id="txtPuntaje">0</span></p>
-      <p>Vidas: <span id="txtVidas">3</span></p>
+      <div class="stat">
+        <span class="label">Puntaje</span>
+        <span id="txtPuntaje">0</span>
+      </div>
+
+      <div class="stat">
+        <span class="label">Vidas</span>
+        <span id="txtVidas">3</span>
+      </div>
     </div>
+
     <div class="botones">
-      <button onclick="moverIzquierda()">Izquierda</button>
-      <button onclick="moverDerecha()">Derecha</button>
-      <button onclick="reiniciar()">Reiniciar</button>
+      <button onclick="moverIzquierda()">⬅ Izquierda</button>
+      <button onclick="moverDerecha()">Derecha ➡</button>
+      <button class="reset" onclick="reiniciar()">🔄 Reiniciar</button>
     </div>
+
   </div>
+
   <script src="limones.js"></script>
 </body>
 </html>
